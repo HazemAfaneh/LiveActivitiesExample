@@ -25,6 +25,7 @@ fun EmptyState(
     modifier: Modifier = Modifier,
 ) {
     val corner = 24.dp
+    val borderColor = PizzaTheme.line.copy(alpha = 0.5f)
     Column(
         modifier = modifier
             .fillMaxWidth()
@@ -32,7 +33,7 @@ fun EmptyState(
                 val strokeWidth = 1.5.dp.toPx()
                 val inset = strokeWidth / 2f
                 drawRoundRect(
-                    color = PizzaTheme.line.copy(alpha = 0.5f),
+                    color = borderColor,
                     topLeft = Offset(inset, inset),
                     size = Size(size.width - strokeWidth, size.height - strokeWidth),
                     cornerRadius = CornerRadius(corner.toPx(), corner.toPx()),

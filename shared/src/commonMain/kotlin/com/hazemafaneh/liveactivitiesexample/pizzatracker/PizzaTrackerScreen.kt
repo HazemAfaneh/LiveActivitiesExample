@@ -63,10 +63,11 @@ fun PizzaTrackerScreen() {
         }
     }
 
-    Scaffold(
-        containerColor = PizzaTheme.bg,
-        contentWindowInsets = WindowInsets(0, 0, 0, 0),
-    ) { _ ->
+    PizzaTheme {
+        Scaffold(
+            containerColor = PizzaTheme.bg,
+            contentWindowInsets = WindowInsets(0, 0, 0, 0),
+        ) { _ ->
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
             contentPadding = PaddingValues(horizontal = 18.dp),
@@ -141,6 +142,7 @@ fun PizzaTrackerScreen() {
             item{
                 Spacer(modifier = Modifier.height(32.dp))
             }
+        }
         }
     }
 }

@@ -47,6 +47,9 @@ fun ProgressStepper(
         label = "stepper-progress",
     )
 
+    val trackColor = PizzaTheme.line
+    val fillColor = PizzaTheme.accent
+
     Box(modifier = modifier.fillMaxWidth().height(54.dp)) {
         Canvas(
             modifier = Modifier
@@ -59,7 +62,7 @@ fun ProgressStepper(
             val stroke = 3.dp.toPx()
 
             drawLine(
-                color = PizzaTheme.line,
+                color = trackColor,
                 start = Offset(pad, y),
                 end = Offset(size.width - pad, y),
                 strokeWidth = stroke,
@@ -68,7 +71,7 @@ fun ProgressStepper(
             val fillEnd = pad + (size.width - 2 * pad) * progress
             if (fillEnd > pad) {
                 drawLine(
-                    color = PizzaTheme.accent,
+                    color = fillColor,
                     start = Offset(pad, y),
                     end = Offset(fillEnd, y),
                     strokeWidth = stroke,
