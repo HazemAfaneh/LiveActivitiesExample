@@ -16,6 +16,7 @@ kotlin {
         iosTarget.binaries.framework {
             baseName = "Shared"
             isStatic = true
+            export(libs.live.activities)
         }
     }
     

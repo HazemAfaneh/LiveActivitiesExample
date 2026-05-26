@@ -31,13 +31,13 @@ private func headline(_ s: DeliveryStateDTO) -> String {
 @available(iOS 16.2, *)
 struct PizzaLiveActivityWidget: Widget {
     var body: some WidgetConfiguration {
-        KMPLiveActivityWidget { state in
-            LockScreenView(state: state.delivery)
+        KMPLiveActivityWidget.configuration { context in
+            LockScreenView(state: context.state.delivery)
                 .padding()
                 .activityBackgroundTint(.black.opacity(0.8))
                 .activitySystemActionForegroundColor(.white)
-        } dynamicIsland: { state in
-            let s = state.delivery
+        } dynamicIsland: { context in
+            let s = context.state.delivery
             return DynamicIsland {
                 DynamicIslandExpandedRegion(.leading) {
                     Label("Demo Pizzeria", systemImage: "fork.knife")

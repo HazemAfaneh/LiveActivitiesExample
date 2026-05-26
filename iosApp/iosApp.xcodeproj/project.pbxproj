@@ -6,11 +6,53 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		71ACFE122FC5F916004E17BC /* KMPLiveActivities in Frameworks */ = {isa = PBXBuildFile; productRef = 71ACFE112FC5F916004E17BC /* KMPLiveActivities */; };
+		71ACFE412FC63CC8004E17BC /* KMPLiveActivities in Frameworks */ = {isa = PBXBuildFile; productRef = 71ACFE402FC63CC8004E17BC /* KMPLiveActivities */; };
+		71ACFE1A2FC63CC6004E17BC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71ACFE192FC63CC6004E17BC /* WidgetKit.framework */; };
+		71ACFE1C2FC63CC6004E17BC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71ACFE1B2FC63CC6004E17BC /* SwiftUI.framework */; };
+		71ACFE2B2FC63CC7004E17BC /* PizzaWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 71ACFE172FC63CC6004E17BC /* PizzaWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		71ACFE292FC63CC7004E17BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A5ACCA807E7ABE764F0B06F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71ACFE162FC63CC6004E17BC;
+			remoteInfo = PizzaWidgetsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		71ACFE302FC63CC7004E17BC /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				71ACFE2B2FC63CC7004E17BC /* PizzaWidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4FBACCED3C291FF60CE13F1A /* LiveActivitiesExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveActivitiesExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		71ACFE172FC63CC6004E17BC /* PizzaWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PizzaWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		71ACFE192FC63CC6004E17BC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		71ACFE1B2FC63CC6004E17BC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		71ACFE2F2FC63CC7004E17BC /* Exceptions for "PizzaWidgets" folder in "PizzaWidgetsExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 71ACFE162FC63CC6004E17BC /* PizzaWidgetsExtension */;
+		};
 		F26B792967B5C3F1ABA80519 /* Exceptions for "iosApp" folder in "iosApp" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -34,6 +76,14 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		71ACFE1D2FC63CC6004E17BC /* PizzaWidgets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				71ACFE2F2FC63CC7004E17BC /* Exceptions for "PizzaWidgets" folder in "PizzaWidgetsExtension" target */,
+			);
+			path = PizzaWidgets;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,16 +91,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71ACFE122FC5F916004E17BC /* KMPLiveActivities in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71ACFE142FC63CC6004E17BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71ACFE412FC63CC8004E17BC /* KMPLiveActivities in Frameworks */,
+				71ACFE1C2FC63CC6004E17BC /* SwiftUI.framework in Frameworks */,
+				71ACFE1A2FC63CC6004E17BC /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71ACFE182FC63CC6004E17BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71ACFE192FC63CC6004E17BC /* WidgetKit.framework */,
+				71ACFE1B2FC63CC6004E17BC /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F586ACFF97650A28F0570A99 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				4FBACCED3C291FF60CE13F1A /* LiveActivitiesExample.app */,
+				71ACFE172FC63CC6004E17BC /* PizzaWidgetsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +131,8 @@
 			children = (
 				5C790160B554FF47876ABF2E /* Configuration */,
 				23D73CE7B557729DBECFAE60 /* iosApp */,
+				71ACFE1D2FC63CC6004E17BC /* PizzaWidgets */,
+				71ACFE182FC63CC6004E17BC /* Frameworks */,
 				F586ACFF97650A28F0570A99 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +140,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		71ACFE162FC63CC6004E17BC /* PizzaWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71ACFE2C2FC63CC7004E17BC /* Build configuration list for PBXNativeTarget "PizzaWidgetsExtension" */;
+			buildPhases = (
+				71ACFE132FC63CC6004E17BC /* Sources */,
+				71ACFE142FC63CC6004E17BC /* Frameworks */,
+				71ACFE152FC63CC6004E17BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				71ACFE1D2FC63CC6004E17BC /* PizzaWidgets */,
+			);
+			name = PizzaWidgetsExtension;
+			packageProductDependencies = (
+				71ACFE402FC63CC8004E17BC /* KMPLiveActivities */,
+			);
+			productName = PizzaWidgetsExtension;
+			productReference = 71ACFE172FC63CC6004E17BC /* PizzaWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		D847DE3BD6028B2A530C7FB9 /* iosApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1CADB594744B4A565912F800 /* Build configuration list for PBXNativeTarget "iosApp" */;
@@ -75,16 +171,19 @@
 				70216C20EE9DA6FBC9606A88 /* Sources */,
 				1C65030120E34355CE1BEC1F /* Frameworks */,
 				1BCA6285ABB52A06FB59F6CC /* Resources */,
+				71ACFE302FC63CC7004E17BC /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				71ACFE2A2FC63CC7004E17BC /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				23D73CE7B557729DBECFAE60 /* iosApp */,
 			);
 			name = iosApp;
 			packageProductDependencies = (
+				71ACFE112FC5F916004E17BC /* KMPLiveActivities */,
 			);
 			productName = iosApp;
 			productReference = 4FBACCED3C291FF60CE13F1A /* LiveActivitiesExample.app */;
@@ -97,9 +196,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1620;
+				LastSwiftUpdateCheck = 2640;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
+					71ACFE162FC63CC6004E17BC = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
 					D847DE3BD6028B2A530C7FB9 = {
 						CreatedOnToolsVersion = 16.2;
 					};
@@ -114,18 +216,29 @@
 			);
 			mainGroup = FCFEFEE7F37E023DB07B67AD;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				71ACFE102FC5F916004E17BC /* XCLocalSwiftPackageReference "../../../kmp-liveactivities/ios-swift-package" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F586ACFF97650A28F0570A99 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				D847DE3BD6028B2A530C7FB9 /* iosApp */,
+				71ACFE162FC63CC6004E17BC /* PizzaWidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1BCA6285ABB52A06FB59F6CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71ACFE152FC63CC6004E17BC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -164,7 +277,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		71ACFE132FC63CC6004E17BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		71ACFE2A2FC63CC7004E17BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71ACFE162FC63CC6004E17BC /* PizzaWidgetsExtension */;
+			targetProxy = 71ACFE292FC63CC7004E17BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		40928B2B489547706D5FEDF0 /* Release */ = {
@@ -222,6 +350,72 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		71ACFE2D2FC63CC7004E17BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Y2H8JDSFU;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PizzaWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PizzaWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hazemafaneh.liveactivitiesexample.LiveActivitiesExample.PizzaWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		71ACFE2E2FC63CC7004E17BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Y2H8JDSFU;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PizzaWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PizzaWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hazemafaneh.liveactivitiesexample.LiveActivitiesExample.PizzaWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -358,6 +552,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		71ACFE2C2FC63CC7004E17BC /* Build configuration list for PBXNativeTarget "PizzaWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71ACFE2D2FC63CC7004E17BC /* Debug */,
+				71ACFE2E2FC63CC7004E17BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BA43BCA176BF8482CCD4F33F /* Build configuration list for PBXProject "iosApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -368,6 +571,24 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		71ACFE102FC5F916004E17BC /* XCLocalSwiftPackageReference "../../../kmp-liveactivities/ios-swift-package" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../../kmp-liveactivities/ios-swift-package";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		71ACFE112FC5F916004E17BC /* KMPLiveActivities */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = KMPLiveActivities;
+		};
+		71ACFE402FC63CC8004E17BC /* KMPLiveActivities */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = KMPLiveActivities;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1A5ACCA807E7ABE764F0B06F /* Project object */;
 }
