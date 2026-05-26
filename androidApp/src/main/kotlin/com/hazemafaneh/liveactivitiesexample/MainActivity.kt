@@ -10,8 +10,8 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Snackbar
@@ -104,11 +104,12 @@ private fun PostNotificationsGate(content: @Composable () -> Unit) {
     }
 
     Scaffold(
+        contentWindowInsets = WindowInsets(0, 0, 0, 0),
         snackbarHost = {
             SnackbarHost(snackbarHostState) { data -> Snackbar(snackbarData = data) }
         },
-    ) { padding ->
-        Box(modifier = Modifier.fillMaxSize().padding(padding)) {
+    ) { _ ->
+        Box(modifier = Modifier.fillMaxSize()) {
             if (status == PermissionStatus.Granted) content()
         }
     }
