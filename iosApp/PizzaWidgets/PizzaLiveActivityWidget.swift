@@ -71,7 +71,6 @@ private func progressFraction(_ s: DeliveryStateDTO) -> Double {
 
 // MARK: - Widget
 
-@available(iOS 16.2, *)
 struct PizzaLiveActivityWidget: Widget {
     var body: some WidgetConfiguration {
         KMPLiveActivityWidget.configuration { context in
@@ -136,7 +135,6 @@ struct PizzaLiveActivityWidget: Widget {
 
 // MARK: - Lock screen view (mirrors LockScreenPreview composable)
 
-@available(iOS 16.2, *)
 private struct LockScreenView: View {
     let state: DeliveryStateDTO
     let attributes: DeliveryAttributesDTO
@@ -179,7 +177,6 @@ private struct LockScreenView: View {
 
 // MARK: - Reusable pieces
 
-@available(iOS 16.2, *)
 private struct PizzaSquareIcon: View {
     let size: CGFloat
     var body: some View {
@@ -193,7 +190,6 @@ private struct PizzaSquareIcon: View {
     }
 }
 
-@available(iOS 16.2, *)
 private struct EtaCluster: View {
     let eta: Int32
     let alignment: HorizontalAlignment
@@ -212,7 +208,6 @@ private struct EtaCluster: View {
     }
 }
 
-@available(iOS 16.2, *)
 private struct GradientProgressBar: View {
     let progress: Double
     var body: some View {
@@ -236,7 +231,6 @@ private struct GradientProgressBar: View {
     }
 }
 
-@available(iOS 16.2, *)
 private struct LockMeta: View {
     let label: String
     let value: String

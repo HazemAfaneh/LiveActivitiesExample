@@ -175,10 +175,15 @@ private suspend fun startActivity(
         attributes = DeliveryAttributes(order.id, order.vendor, order.itemHeadline),
         initialState = stateFor(key),
         config = LiveActivityConfig(
-            pushType = PushType.Token,
+            pushType = PushType.None,
             staleAfter = 1.hours,
         ),
-    ).onSuccess(onStarted)
+    )
+        .onSuccess {
+            println("[PizzaTracker] start SUCCESS id=${it.id}")
+            onStarted(it)
+        }
+        .onFailure { println("[PizzaTracker] start FAILED: $it") }
 }
 
 private fun stateFor(key: StatusKey): DeliveryState {
