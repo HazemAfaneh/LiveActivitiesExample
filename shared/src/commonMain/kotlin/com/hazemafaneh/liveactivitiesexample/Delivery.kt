@@ -8,6 +8,7 @@ import kotlinx.serialization.Serializable
 data class DeliveryAttributes(
     val orderId: String,
     val restaurantName: String,
+    val itemHeadline: String,
 ) : LiveActivityAttributes
 
 @Serializable

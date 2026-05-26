@@ -172,7 +172,7 @@ private suspend fun startActivity(
     onStarted: (DeliveryHandle) -> Unit,
 ) {
     LiveActivityManager.start(
-        attributes = DeliveryAttributes(order.id, order.vendor),
+        attributes = DeliveryAttributes(order.id, order.vendor, order.itemHeadline),
         initialState = stateFor(key),
         config = LiveActivityConfig(
             pushType = PushType.Token,
